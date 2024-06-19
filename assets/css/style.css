@@ -1,0 +1,233 @@
+/* Estilos generales y navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+.logo {
+    margin-right: auto; /* Logo pegado a la izquierda */
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 40px; /* Ajusta este valor para cambiar el tamaño del logo */
+    height: auto;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem; /* Reduce el espacio entre los elementos */
+    margin-left: auto; /* Llevamos los elementos a la derecha */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 0.75rem; /* Ajusta el padding para mayor proximidad */
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+.nav-links li a.associate-btn {
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.nav-links li a.associate-btn:hover {
+    background: darkblue;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
+
+/* Contenido principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    max-width: 1600px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.carrousel {
+    flex: 1;
+    position: relative;
+    width: 100%;
+}
+
+.formulario {
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Carrusel pequeño */
+.small-carousel {
+    margin: 20px auto;
+    padding: 1rem;
+    max-width: 1600px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.small-carousel-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.small-carousel-slide {
+    flex: 1;
+    text-align: center;
+}
+
+.small-carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.small-carousel-slide img:hover {
+    transform: scale(1.05);
+}
+
+.small-caption {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .formulario, .carrousel {
+        margin: 0 0 1rem 0;
+    }
+
+    .small-carousel-container {
+        flex-direction: column;
+    }
+}
