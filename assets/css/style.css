@@ -6,8 +6,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.9rem;
 }
+
 
 .navbar {
     width: 100%;
