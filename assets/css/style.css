@@ -10,7 +10,6 @@ body {
     font-size: 0.9rem;
 }
 
-
 .navbar {
     width: 100%;
     background-color: white;
@@ -131,13 +130,14 @@ body {
 
 .caption {
     position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
     padding: 8px 12px;
     border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
 }
 
 .prev, .next {
