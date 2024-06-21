@@ -164,6 +164,30 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Nuevo estilo para el texto debajo del carrusel */
+.info-text {
+    text-align:center;
+/*     margin: 5rem 4rem 0; */
+    font-size: 1.2rem;
+}
+
+.info-text p {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.info-text .associate-btn {
+    background: linear-gradient(to right, #55aaf0, #2125f3);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.info-text .associate-btn:hover {
+    background: darkblue;
+}
+
 /* Carrusel pequeño */
 .small-carousel {
     margin: 20px auto;
