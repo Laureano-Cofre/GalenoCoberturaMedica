@@ -151,7 +151,8 @@ body {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 3px;
+    border-color: transparent;
     user-select: none;
 }
 
@@ -166,14 +167,15 @@ body {
 
 /* Nuevo estilo para el texto debajo del carrusel */
 .info-text {
-    text-align: left; /* Cambia la alineación a la izquierda */
-    margin-left: 15rem; /* Ajusta el margen izquierdo según tus necesidades */
+    text-align: center; /* Cambia la alineación a la izquierda */
+    /* Ajusta el margen izquierdo según tus necesidades */
     font-size: 1.2rem;
     margin-top: 1rem; /* Añade un margen superior para separación */
 }
 
-.info-text p {
-    margin-bottom: 10px;
+
+.negrita {
+    margin-bottom: 1rem;
     font-size: 2rem;
 }
 
@@ -183,11 +185,22 @@ body {
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
     text-decoration: none;
-    margin-left: 15rem;
+    margin: auto;
+    display: block; /* Añade display: block para que funcione con margin: auto */
+    text-align: center; /* Centra el texto dentro del botón */
+    max-width: 15rem;
 }
 
 .info-text .associate-btn:hover {
     background: darkblue;
+}
+
+.pregunta{
+    text-align: center; /* Cambia la alineación a la izquierda */
+    /* Ajusta el margen izquierdo según tus necesidades */
+    font-size: 1.2rem;
+    margin-top: 1rem; /* Añade un margen superior para separación */
+    margin-bottom: 2rem;
 }
 
 /* Carrusel pequeño */
@@ -227,6 +240,108 @@ body {
     color: #333;
 }
 
+/* Estilo para la sección de servicios médicos */
+.medical-services {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1100%;
+}
+
+.medical-services h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.medical-services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Carrusel de servicios médicos */
+.medical-carousel {
+    position: relative;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    max-width: 70rem;
+}
+
+.medical-carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem; /* Añade un gap para la separación */
+    padding: 0 1rem; /* Añade padding para que las imágenes no toquen los bordes del contenedor */
+}
+
+.medical-carousel-slide {
+    flex: 0 0 calc(20% - 1rem); /* Ajusta el tamaño de cada slide restando el gap */
+    text-align: center;
+}
+
+.medical-carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.medical-carousel-slide img:hover {
+    transform: scale(1.05);
+}
+
+.slide-caption {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.prev-medical, .next-medical {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    border-color: transparent;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next-medical {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-medical {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev-medical:hover, .next-medical:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.view-all-btn {
+    background: linear-gradient(to right, #55aaf0, #2125f3);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.view-all-btn:hover {
+    background: darkblue;
+}
+
+
 /* Media queries */
 @media (max-width: 768px) {
     .nav-links {
@@ -237,26 +352,34 @@ body {
         top: 100%;
         left: 0;
         background-color: white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .nav-links.active {
+    .nav-links.open {
         display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
     }
 
     .hamburger {
         display: flex;
     }
 
-    .content {
-        flex-direction: column;
+    .carousel-slide img {
+        max-height: 300px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+        object-fit: cover;
     }
 
-    .formulario, .carrousel {
-        margin: 0 0 1rem 0;
+    .carousel-slide .caption {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
     }
 
-    .small-carousel-container {
-        flex-direction: column;
+    .medical-carousel-slide {
+        flex: 0 0 100%; /* Muestra una imagen por slide en pantallas pequeñas */
+    }
+
+    .prev-medical, .next-medical {
+        padding: 8px; /* Reduce el tamaño de los botones de navegación */
     }
 }
