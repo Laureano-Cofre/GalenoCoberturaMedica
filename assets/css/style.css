@@ -67,7 +67,7 @@ body {
 }
 
 .nav-links li a.associate-btn {
-    background: linear-gradient(to right, #4CAF50, #2196F3);
+    background: linear-gradient(to right, #4CAF50, #1866a7);
     color: white;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
@@ -154,6 +154,7 @@ body {
     border-radius: 3px;
     border-color: transparent;
     user-select: none;
+    z-index: 10;
 }
 
 .next {
@@ -173,14 +174,13 @@ body {
     margin-top: 1rem; /* Añade un margen superior para separación */
 }
 
-
 .negrita {
     margin-bottom: 1rem;
     font-size: 2rem;
 }
 
 .associate-btn {
-    background: linear-gradient(to right, #55aaf0, #2125f3);
+    background: linear-gradient(to right, #578ab4, #2f62cf);
     color: white;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
@@ -195,7 +195,7 @@ body {
     background: darkblue;
 }
 
-.pregunta{
+.pregunta {
     text-align: center; /* Cambia la alineación a la izquierda */
     /* Ajusta el margen izquierdo según tus necesidades */
     font-size: 1.2rem;
@@ -210,7 +210,6 @@ body {
     max-width: 70rem;
     overflow: hidden;
     width: 100%;
-    
 }
 
 .small-carousel-container {
@@ -246,16 +245,16 @@ body {
     padding: 2rem;
     text-align: center;
     margin: 2rem auto;
-    max-width: 1100%;
+    max-width: 100%;
 }
 
 .medical-services h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .medical-services h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     color: #555;
 }
@@ -312,6 +311,7 @@ body {
     border-color: transparent;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
 .next-medical {
@@ -341,25 +341,27 @@ body {
     background: darkblue;
 }
 
-
 /* Media queries */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
+        text-align: center;
         position: absolute;
-        top: 100%;
+        top: 60px; /* Ajusta este valor según la altura de tu navbar */
         left: 0;
         background-color: white;
+        z-index: 999;
     }
 
-    .nav-links.open {
+    .nav-links.active {
         display: flex;
     }
 
     .nav-links li {
         text-align: center;
+        margin: 0.5rem 0;
     }
 
     .hamburger {
@@ -367,19 +369,24 @@ body {
     }
 
     .carousel-slide img {
-        max-height: 300px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+        max-height: 300px;
         object-fit: cover;
     }
 
     .carousel-slide .caption {
-        font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+        font-size: 1.5rem;
+    }
+
+    .medical-carousel-container {
+        gap: 0.5rem; /* Reduce el gap en pantallas pequeñas */
+        padding: 0 0.5rem; /* Ajusta el padding */
     }
 
     .medical-carousel-slide {
-        flex: 0 0 100%; /* Muestra una imagen por slide en pantallas pequeñas */
+        flex: 0 0 calc(50% - 0.5rem); /* Ajusta el tamaño de los slides */
     }
 
     .prev-medical, .next-medical {
-        padding: 8px; /* Reduce el tamaño de los botones de navegación */
+        padding: 8px;
     }
 }

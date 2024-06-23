@@ -29,10 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar el carrusel mostrando la primera imagen
     showSlide(currentSlide);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Código existente...
 
     // Código para el nuevo carrusel de servicios médicos
     const medicalCarousel = document.querySelector('.medical-carousel-container');
@@ -41,22 +37,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentMedicalSlide = 0;
 
     function updateMedicalCarousel() {
-        const offset = -currentMedicalSlide * 20; // Mueve el carrusel 20% a la izquierda por cada slide
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 5; // Mostrar 2 slides en pantallas pequeñas y 5 en pantallas grandes
+        const offset = -currentMedicalSlide * (100 / slidesToShow); // Calcula el desplazamiento adecuado
         medicalCarousel.style.transform = `translateX(${offset}%)`;
     }
 
     function nextMedicalSlide() {
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 5; // Mostrar 2 slides en pantallas pequeñas y 5 en pantallas grandes
         currentMedicalSlide = (currentMedicalSlide + 1) % totalSlides;
-        if (currentMedicalSlide + 5 > totalSlides) {
+        if (currentMedicalSlide + slidesToShow > totalSlides) {
             currentMedicalSlide = 0;
         }
         updateMedicalCarousel();
     }
 
     function prevMedicalSlide() {
+        const slidesToShow = window.innerWidth <= 768 ? 2 : 5; // Mostrar 2 slides en pantallas pequeñas y 5 en pantallas grandes
         currentMedicalSlide = (currentMedicalSlide - 1 + totalSlides) % totalSlides;
         if (currentMedicalSlide < 0) {
-            currentMedicalSlide = totalSlides - 5;
+            currentMedicalSlide = totalSlides - slidesToShow;
         }
         updateMedicalCarousel();
     }
@@ -64,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.next-medical').addEventListener('click', nextMedicalSlide);
     document.querySelector('.prev-medical').addEventListener('click', prevMedicalSlide);
 
-    // Inicializar el carrusel mostrando las primeras 5 imágenes
+    // Inicializar el carrusel mostrando las primeras imágenes
     updateMedicalCarousel();
+
+    // Actualizar el carrusel al redimensionar la ventana
+    window.addEventListener('resize', updateMedicalCarousel);
 });
