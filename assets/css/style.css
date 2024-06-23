@@ -166,9 +166,10 @@ body {
 
 /* Nuevo estilo para el texto debajo del carrusel */
 .info-text {
-    text-align:center;
-/*     margin: 5rem 4rem 0; */
+    text-align: left; /* Cambia la alineación a la izquierda */
+    margin-left: 15rem; /* Ajusta el margen izquierdo según tus necesidades */
     font-size: 1.2rem;
+    margin-top: 1rem; /* Añade un margen superior para separación */
 }
 
 .info-text p {
@@ -176,12 +177,13 @@ body {
     font-size: 2rem;
 }
 
-.info-text .associate-btn {
+.associate-btn {
     background: linear-gradient(to right, #55aaf0, #2125f3);
     color: white;
     padding: 0.5rem 0.75rem;
     border-radius: 4px;
     text-decoration: none;
+    margin-left: 15rem;
 }
 
 .info-text .associate-btn:hover {
@@ -190,16 +192,17 @@ body {
 
 /* Carrusel pequeño */
 .small-carousel {
-    margin: 20px auto;
+    margin: 1.5rem auto;
     padding: 1rem;
-    max-width: 1600px;
+    max-width: 70rem;
     overflow: hidden;
     width: 100%;
+    
 }
 
 .small-carousel-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem; /* Incrementa el espacio entre los elementos del carrusel */
 }
 
 .small-carousel-slide {
