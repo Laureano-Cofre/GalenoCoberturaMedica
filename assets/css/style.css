@@ -24,15 +24,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
     width: 100%;
 }
 
-.logo {
-    margin-right: auto; /* Logo pegado a la izquierda */
-}
+/* .logo {
+    margin-right: auto; /* Logo pegado a la izquierda
+} */
 
 .logo a {
     text-decoration: none;
@@ -95,8 +95,8 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
-    max-width: 1600px;
+    margin: 5rem auto;
+    max-width: 90%;
     padding: 1rem;
     width: 100%;
 }
@@ -133,10 +133,22 @@ body {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
+    color: #858585;
+    padding: 8px 12px;
+    border-radius: 4px;
+/*     background-color: rgba(109, 109, 109, 0.3); */
+    font-size: 2rem;
+}
+
+.caption-B {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     color: #ffffff;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.3);
+/*     background-color: rgba(109, 109, 109, 0.3); */
     font-size: 2rem;
 }
 
@@ -176,8 +188,9 @@ body {
 
 .negrita {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
+
 
 .associate-btn {
     background: linear-gradient(to right, #578ab4, #2f62cf);
