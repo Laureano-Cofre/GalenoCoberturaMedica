@@ -403,3 +403,91 @@ body {
         padding: 8px;
     }
 }
+
+
+
+/* Quíenes somos */
+
+.about-us-section {
+    text-align: left;
+    padding: 5rem;
+    margin-top: 5rem; /* Añade un margen superior para que no se superponga con la barra de navegación */
+}
+
+.about-us-section h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.about-us-section h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 100;
+}
+
+.about-us-section .p {
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas más pequeñas */
+}
+
+.image-gallery img {
+    width: 15rem; /* Calcula el ancho de cada imagen restando el espacio entre imágenes */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 2px solid black; /* Añade un borde negro a las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra a las imágenes */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta la sombra en el hover */
+}
+
+.additional-info {
+    text-align: left;
+    padding: 2rem 5rem;
+    margin-top: -3rem;
+}
+
+.additional-info p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.additional-info p strong {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: calc(50% - 1rem); /* Ajusta el ancho de las imágenes en pantallas pequeñas */
+    }
+
+    .additional-info {
+        padding: 1rem 2rem;
+    }
+
+    .additional-info p {
+        font-size: 0.9rem;
+    }
+}
+
+.about-us-section2 {
+    text-align: left;
+/*     padding: 1rem; */
+    margin: 1rem 5rem 0 5rem ;
+}
+
+.bottom {
+    margin-bottom: 1rem;
+}
