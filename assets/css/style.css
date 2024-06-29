@@ -354,6 +354,82 @@ body {
     background: darkblue;
 }
 
+
+/* Estilo para la sección de servicios médicos de Nuestros Sanatorios*/
+
+.medical-services2 {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    margin: 5rem auto;
+    max-width: 100%;
+}
+
+.medical-services2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.medical-services2 h3 {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.medical-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.medical-item {
+    text-align: center;
+}
+
+.medical-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.medical-item img:hover {
+    transform: scale(1.05);
+}
+
+.slide-caption2 {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.view-all-btn2 {
+    background: linear-gradient(to right, #55aaf0, #2125f3);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.view-all-btn2:hover {
+    background: darkblue;
+}
+
+@media (max-width: 768px) {
+    .medical-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .medical-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Media queries */
 @media (max-width: 768px) {
     .nav-links {
@@ -387,7 +463,10 @@ body {
     }
 
     .carousel-slide .caption {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    .carousel-slide .caption-B {
+        font-size: 1rem;
     }
 
     .medical-carousel-container {
@@ -490,4 +569,40 @@ body {
 
 .bottom {
     margin-bottom: 1rem;
+}
+
+
+.footer {
+    background-color: #1866a7; /* Color de fondo azul */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.footer-text p {
+    margin: 0.5rem 0;
+}
+
+.footer-text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-text a:hover {
+    text-decoration: none;
 }
