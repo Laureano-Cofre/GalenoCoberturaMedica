@@ -10,6 +10,19 @@ body {
     font-size: 0.9rem;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 40px; /* Ajusta este valor para cambiar el tamaño del logo */
+    height: auto;
+    width: auto;
+}
+
 .navbar {
     width: 100%;
     background-color: white;
@@ -30,28 +43,17 @@ body {
     width: 100%;
 }
 
-/* .logo {
-    margin-right: auto; /* Logo pegado a la izquierda
-} */
-
-.logo a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.logo img {
-    max-height: 40px; /* Ajusta este valor para cambiar el tamaño del logo */
-    height: auto;
-    width: auto;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
     gap: 0.5rem; /* Reduce el espacio entre los elementos */
     margin-left: auto; /* Llevamos los elementos a la derecha */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
 }
 
 .nav-links li a {
@@ -61,21 +63,24 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.nav-links li a:hover {
-    background-color: #f4f4f4;
-    border-radius: 4px;
-}
-
 .nav-links li a.associate-btn {
     background: linear-gradient(to right, #4CAF50, #1866a7);
     color: white;
     padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center; /* Alinea el botón verticalmente */
+}
+
+.nav-links li a:hover {
+    background-color: #f4f4f4;
     border-radius: 4px;
 }
 
 .nav-links li a.associate-btn:hover {
     background: darkblue;
 }
+
 
 .hamburger {
     display: none;
