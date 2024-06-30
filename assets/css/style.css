@@ -137,7 +137,7 @@ body {
     padding: 8px 12px;
     border-radius: 4px;
 /*     background-color: rgba(109, 109, 109, 0.3); */
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .caption-B {
@@ -149,7 +149,7 @@ body {
     padding: 8px 12px;
     border-radius: 4px;
 /*     background-color: rgba(109, 109, 109, 0.3); */
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .prev, .next {
